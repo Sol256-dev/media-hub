@@ -1,0 +1,57 @@
+GET http://localhost:3000/api/v1/users
+
+###
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+    "username":"Tony",
+    "name":"Tony Man",
+    "email": "tonman@email.com"
+}
+
+###
+GET http://localhost:3000/api/v1/users/2b1ebf10-2d63-446b-ba97-fdbd153a054d
+
+###
+PATCH http://localhost:3000/api/v1/users/bb441751-5eb2-4673-9468-b023b1877f4e
+Content-Type: application/json
+
+{
+    "username":"Solomon M"
+}
+
+###
+DELETE http://localhost:3000/api/v1/users/e7fb060e-1f65-4dca-bb33-848b5b58dc1f
+
+###
+GET http://localhost:3000/api/v1/media
+
+###
+GET http://localhost:3000/api/v1/media/8efe6fa5-e498-4dab-9498-7e8235214ac3
+
+###
+POST http://localhost:3000/api/v1/media
+Content-Type: application/json
+
+{
+    "medianame": "The Big Bang Theory",
+    "overview":"The lives of four socially awkward friends, Leonard, Sheldon, Howard and Raj, take a wild turn when they meet the beautiful and free-spirited Penny.",
+    "posterpath":"https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_.jpg",
+    "price":8000,
+    "Userid":"37e88f43-71c9-4c87-9d42-73852752f3f2",
+    "mediaTypeTypeid":"c35236f3-a87e-4e03-8a01-a3196ea45cbf",
+    "genreGenreid":"81c99c6b-4a47-4867-810a-9c49fbb7cc15",
+    "originOriginid":"7472f76f-0611-4834-9aef-9a165baed293"
+}
+
+###
+PATCH http://localhost:3000/api/v1/media/8efe6fa5-e498-4dab-9498-7e8235214ac3
+Content-Type: application/json
+
+{
+    "price":8000
+}
+
+###
+DELETE  http://localhost:3000/api/v1/media/8efe6fa5-e498-4dab-9498-7e8235214ac3
