@@ -1,20 +1,28 @@
-const express = require('express');
-const createError = require('http-errors');
-const morgan = require('morgan');
-require('dotenv').config();
+const express = require("express");
+const createError = require("http-errors");
+const morgan = require("morgan");
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
-app.get('/', async (req, res, next) => {
-  res.send({ message: 'Awesome it works 🐻' });
+const apiRoutes = require("./routes/api.route");
+const apiUsers = require("./routes/api.users");
+
+app.get("/", async (req, res, next) => {
+  res.send({
+    status: 200,
+    message: "Awesome it works 🐻",
+    api_documentation:
+      "https://documenter.getpostman.com/view/24961611/2s93RNzapr#72085a2c-80a0-41e0-82b4-7a2a72eb5a60",
+  });
 });
 
-
-
-app.use('/api/v1', require('./routes/api.route'));
+app.use("/api/v1/media", apiRoutes);
+app.use("/api/v1/users", apiUsers);
+app.use("/api/v1/", require("./routes/api.supportTables"));
 
 app.use((req, res, next) => {
   next(createError.NotFound());

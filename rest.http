@@ -5,16 +5,16 @@ POST http://localhost:3000/api/v1/users
 Content-Type: application/json
 
 {
-    "username":"Tony",
-    "name":"Tony Man",
-    "email": "tonman@email.com"
+    "username":"Wayne",
+    "name":"Wendy Namome",
+    "email": "namomewendy@email.com"
 }
 
 ###
-GET http://localhost:3000/api/v1/users/2b1ebf10-2d63-446b-ba97-fdbd153a054d
+GET http://localhost:3000/api/v1/users/37e88f43-71c9-4c87-9d42-73852752f3f2
 
 ###
-PATCH http://localhost:3000/api/v1/users/bb441751-5eb2-4673-9468-b023b1877f4e
+PATCH http://localhost:3000/api/v1/users/37e88f43-71c9-4c87-9d42-73852752f3f2
 Content-Type: application/json
 
 {
@@ -35,13 +35,13 @@ POST http://localhost:3000/api/v1/media
 Content-Type: application/json
 
 {
-    "medianame": "The Big Bang Theory",
-    "overview":"The lives of four socially awkward friends, Leonard, Sheldon, Howard and Raj, take a wild turn when they meet the beautiful and free-spirited Penny.",
-    "posterpath":"https://m.media-amazon.com/images/M/MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_.jpg",
-    "price":8000,
+    "medianame": "John Wick Chapter 4",
+    "overview":"With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan to Berlin.",
+    "posterpath":"https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
+    "price":30000,
     "Userid":"37e88f43-71c9-4c87-9d42-73852752f3f2",
-    "mediaTypeTypeid":"c35236f3-a87e-4e03-8a01-a3196ea45cbf",
-    "genreGenreid":"81c99c6b-4a47-4867-810a-9c49fbb7cc15",
+    "mediaTypeTypeid":"61c12cfa-5fc1-42a7-86f4-0e4408942dd7",
+    "genreGenreid":"0affd248-b807-4c45-bbf2-c38d3d32f97a",
     "originOriginid":"7472f76f-0611-4834-9aef-9a165baed293"
 }
 
