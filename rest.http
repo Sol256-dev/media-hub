@@ -55,3 +55,15 @@ Content-Type: application/json
 
 ###
 DELETE  http://localhost:3000/api/v1/media/8efe6fa5-e498-4dab-9498-7e8235214ac3
+
+###
+POST http://localhost:3000/api/v1/origin
+Content-Type: application/json
+
+{
+    "country": "UG", 
+    "language": "Luo"
+}
+
+###
+GET http://localhost:3000/api/v1/origin
