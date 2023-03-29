@@ -7,7 +7,7 @@ require("dotenv").config();
 const app = express();
 
 var corsOptions = {
-  origin: ["https://vid-lib.netlify.app/","http://localhost"],
+  origin: "https://vid-lib.netlify.app/",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
