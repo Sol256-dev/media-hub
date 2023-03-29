@@ -16,7 +16,7 @@ const apiUsers = require("./routes/api.users");
 app.get("/", async (req, res, next) => {
   res.send({
     status: 200,
-    message: "Awesome it works 🐻",
+    message: "Awesome it works 🐻 ",
     api_documentation:
       "https://documenter.getpostman.com/view/24961611/2s93RNzapr#72085a2c-80a0-41e0-82b4-7a2a72eb5a60",
   });
