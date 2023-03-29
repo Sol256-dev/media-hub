@@ -6,11 +6,6 @@ require("dotenv").config();
 
 const app = express();
 
-var corsOptions = {
-  origin: "https://vid-lib.netlify.app/",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
@@ -27,7 +22,7 @@ app.get("/", async (req, res, next) => {
   });
 });
 
-app.use("/api/v1/media", cors(corsOptions), apiRoutes);
+app.use("/api/v1/media", cors(), apiRoutes);
 app.use("/api/v1/users", cors(), apiUsers);
 app.use("/api/v1/", cors(), require("./routes/api.supportTables"));
 
