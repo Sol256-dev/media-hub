@@ -1,9 +1,16 @@
 const express = require("express");
+const cors = require("cors");
 const createError = require("http-errors");
 const morgan = require("morgan");
 require("dotenv").config();
 
 const app = express();
+
+var corsOptions = {
+  origin: "http://localhost",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
@@ -20,9 +27,9 @@ app.get("/", async (req, res, next) => {
   });
 });
 
-app.use("/api/v1/media", apiRoutes);
-app.use("/api/v1/users", apiUsers);
-app.use("/api/v1/", require("./routes/api.supportTables"));
+app.use("/api/v1/media", cors(corsOptions), apiRoutes);
+app.use("/api/v1/users", cors(corsOptions), apiUsers);
+app.use("/api/v1/", cors(corsOptions), require("./routes/api.supportTables"));
 
 app.use((req, res, next) => {
   next(createError.NotFound());
